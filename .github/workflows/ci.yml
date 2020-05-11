@@ -35,7 +35,7 @@ jobs:
     - name: Lint with Black
       if: matrix.python-version == 3.8 && matrix.os == 'ubuntu-latest'
       run: |
-        black --check --diff --verbose .
+        black --check --diff --verbose panda*
     # - name: Test with pytest
     #   run: |
     #     python -m pytest -r sx tests
