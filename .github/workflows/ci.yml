@@ -23,6 +23,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
+      if: matrix.python-version == 3.8 && matrix.os == 'ubuntu-latest'
       run: |
         python -m pip install --upgrade pip setuptools wheel
         python -m pip install -q --no-cache-dir black
@@ -40,4 +41,5 @@ jobs:
     #     python -m pytest -r sx tests
     - name: Test pandamon
       run: |
+        PATH="$PWD${PATH:+:${PATH}}"; export PATH;
         pandamon user.feickert
