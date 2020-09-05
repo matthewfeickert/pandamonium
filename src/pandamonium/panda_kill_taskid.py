@@ -12,6 +12,7 @@ epi = 'Thanks ATLAS. Thatlas.'
 
 import sys
 import argparse
+
 try:
     from pandatools import PBookCore
 except ImportError:
@@ -45,6 +46,7 @@ def stdin_iter():
     for line in sys.stdin:
         for job in line.split():
             yield int(job)
+
 
 def main():
     args = get_args()
