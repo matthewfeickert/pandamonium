@@ -56,7 +56,3 @@ def main():
         jobs = args.taskids
 
     kill(jobs, args)
-
-
-if __name__ == '__main__':
-    main()
