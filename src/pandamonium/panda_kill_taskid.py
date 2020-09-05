@@ -43,8 +43,7 @@ def stdin_iter():
         for job in line.split():
             yield int(job)
 
-
-if __name__ == '__main__':
+def main():
     args = get_args()
 
     try:
@@ -60,3 +59,7 @@ if __name__ == '__main__':
         jobs = args.taskids
 
     kill(jobs, args)
+
+
+if __name__ == '__main__':
+    main()
