@@ -68,14 +68,8 @@ def stdin_iter():
             yield int(job)
 
 
-if __name__ == '__main__':
+def main():
     args = get_args()
-
-    try:
-        from pandatools import PBookCore
-    except ImportError:
-        print("Failed to load PandaClient, please set up locally")
-        sys.exit(1)
 
     jobs = []
     if not args.taskids:
@@ -84,3 +78,7 @@ if __name__ == '__main__':
         jobs = args.taskids
 
     retry(jobs, args)
+
+
+if __name__ == '__main__':
+    main()
