@@ -13,6 +13,11 @@ epi = 'Thanks ATLAS. Thatlas.'
 
 import sys
 import argparse
+try:
+    from pandatools import PBookCore
+except ImportError:
+    print("Failed to load PandaClient, please set up locally")
+    sys.exit(1)
 
 
 def get_args():
