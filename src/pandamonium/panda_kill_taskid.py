@@ -46,12 +46,6 @@ def stdin_iter():
 def main():
     args = get_args()
 
-    try:
-        from pandatools import PBookCore
-    except ImportError:
-        print("Failed to load PandaClient, please set up locally")
-        sys.exit(1)
-
     jobs = []
     if not args.taskids:
         jobs = stdin_iter()
