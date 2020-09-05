@@ -1,13 +1,13 @@
 name: publish distributions
 on:
   push:
-    branches:
-    - master
-    tags:
-    - v*
-  pull_request:
-    branches:
-    - master
+  #   branches:
+  #   - master
+  #   tags:
+  #   - v*
+  # pull_request:
+  #   branches:
+  #   - master
 
 jobs:
   build-and-publish:
