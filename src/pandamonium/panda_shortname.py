@@ -39,7 +39,7 @@ def get_args():
     return parser.parse_args()
 
 
-def run():
+def main():
     args = get_args()
     ds_names = args.ds_names
     if not ds_names:

@@ -284,7 +284,7 @@ def stdin_iter(args):
             yield ds
 
 
-def run():
+def main():
     args = get_args()
 
     taskname = args.taskname
